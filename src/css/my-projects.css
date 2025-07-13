@@ -1,0 +1,133 @@
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.fadeOut {
+    animation: fadeOut 1s ease-in-out;
+}
+:root {
+    scroll-behavior: smooth;
+    --bodoni: "Bodoni Moda", serif;
+    --inter: "Inter", sans-serif;
+    --amarante: "Amarante", serif;
+    --unlock: "Unlock", serif;
+    font-family: var(--inter);
+    
+}
+
+
+/* .project-column {
+    flex: 0.7;
+} */
+
+/* @media(max-width: 768px) {
+    .project-container .project-column {
+        flex: 0.7;
+    }
+
+    .project-column:hover {
+        flex: 3;
+    }
+} */
+
+/* .project-column:hover {
+    flex: 2;
+} */
+
+.project-column, .project-container {
+    transition: height 3s ease-in-out;
+}
+
+.project-column:hover {
+    width: 40%;
+    transition: 1s ease-in-out;
+}
+
+
+.project-column:hover > .project-cover {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.project-column:not(:hover) {
+    width: 20%;
+    transition: 1s ease-in-out;
+}
+
+
+@media(max-width: 768px) {
+    .project-column:hover {
+        width: 70%;
+        transition: 1s ease-in-out;
+    }
+
+
+    .project-column:not(:hover) {
+        width: 10%;
+        transition: 1s ease-in-out;
+    }
+}
+
+.project-column > .project-cover{
+    font-family: serif;
+    font-weight: 600;
+
+}
+
+.project-column > .project-cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* .project-column:nth-child(1)::after {
+    content: "1";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.project-column:nth-child(2)::after {
+    content: "2";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.project-column:nth-child(3)::after {
+    content: "3";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.project-column:nth-child(4)::after {
+    content: "4";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+} */

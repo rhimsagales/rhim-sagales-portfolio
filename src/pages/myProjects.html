@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unlock&display=swap" rel="stylesheet">
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="../css/my-projects.css">
+    <link rel="stylesheet" href="../css/global-styling.css">
+    <link rel="stylesheet" href="../dist/global-styling-output.css">
+    <link rel="stylesheet" href="../dist/my-projects-output.css">
+    <title>My Projects | Portfolio</title>
+</head>
+<body>
+    <header class="global-header">
+        <div class="global-logo-container bodoni logo-text">
+            <a href="">sagales.</a>
+        </div>
+        <nav class="global-nav-desktop">
+            <ul class="contents global-desktop-ul-links">
+                <li>
+                    <a href="./dashboard.html">Dashboard</a>
+                </li>
+                <li class="selected">
+                    <a href="./myProjects.html">My Projects</a>
+                </li>
+                <li>
+                    <a href="./contactMe.html">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="global-hamburger-container">
+            <button class="global-hamburger-btn" popovertarget="navigation-modal-container">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+
+            </button>
+        </div>
+
+    </header>
+    <div class="global-mobile-nav-modal" popover id="navigation-modal-container">
+        <nav class="global-nav-mobile">
+            <h1 class="global-nav-mobile-header inter" id="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-6">
+                    <path d="M2 4.25A2.25 2.25 0 0 1 4.25 2h2.5A2.25 2.25 0 0 1 9 4.25v2.5A2.25 2.25 0 0 1 6.75 9h-2.5A2.25 2.25 0 0 1 2 6.75v-2.5ZM2 13.25A2.25 2.25 0 0 1 4.25 11h2.5A2.25 2.25 0 0 1 9 13.25v2.5A2.25 2.25 0 0 1 6.75 18h-2.5A2.25 2.25 0 0 1 2 15.75v-2.5ZM11 4.25A2.25 2.25 0 0 1 13.25 2h2.5A2.25 2.25 0 0 1 18 4.25v2.5A2.25 2.25 0 0 1 15.75 9h-2.5A2.25 2.25 0 0 1 11 6.75v-2.5ZM15.25 11.75a.75.75 0 0 0-1.5 0v2h-2a.75.75 0 0 0 0 1.5h2v2a.75.75 0 0 0 1.5 0v-2h2a.75.75 0 0 0 0-1.5h-2v-2Z" />
+                </svg>     
+
+                Navigation
+            </h1>
+            <div class="divider my-0 h-0"></div>
+            <ul class="contents">
+                <li class="contents">
+                    <a href="./dashboard.html" class="global-nav-mobile-links inter">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                            <path fill-rule="evenodd"
+                                d="M4.25 2A2.25 2.25 0 0 0 2 4.25v2.5A2.25 2.25 0 0 0 4.25 9h2.5A2.25 2.25 0 0 0 9 6.75v-2.5A2.25 2.25 0 0 0 6.75 2h-2.5Zm0 9A2.25 2.25 0 0 0 2 13.25v2.5A2.25 2.25 0 0 0 4.25 18h2.5A2.25 2.25 0 0 0 9 15.75v-2.5A2.25 2.25 0 0 0 6.75 11h-2.5Zm9-9A2.25 2.25 0 0 0 11 4.25v2.5A2.25 2.25 0 0 0 13.25 9h2.5A2.25 2.25 0 0 0 18 6.75v-2.5A2.25 2.25 0 0 0 15.75 2h-2.5Zm0 9A2.25 2.25 0 0 0 11 13.25v2.5A2.25 2.25 0 0 0 13.25 18h2.5A2.25 2.25 0 0 0 18 15.75v-2.5A2.25 2.25 0 0 0 15.75 11h-2.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="contents">
+                    <a href="./myProjects.html" class="global-nav-mobile-links inter">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                            <path
+                                d="M3.75 3A1.75 1.75 0 0 0 2 4.75v3.26a3.235 3.235 0 0 1 1.75-.51h12.5c.644 0 1.245.188 1.75.51V6.75A1.75 1.75 0 0 0 16.25 5h-4.836a.25.25 0 0 1-.177-.073L9.823 3.513A1.75 1.75 0 0 0 8.586 3H3.75ZM3.75 9A1.75 1.75 0 0 0 2 10.75v4.5c0 .966.784 1.75 1.75 1.75h12.5A1.75 1.75 0 0 0 18 15.25v-4.5A1.75 1.75 0 0 0 16.25 9H3.75Z" />
+                        </svg>
+                        My Projects
+                    </a>
+                </li>
+                <li class="contents">
+                    <a href="./contactMe.html" class="global-nav-mobile-links inter">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                            <path d="M3 4a2 2 0 0 0-2 2v1.161l8.441 4.221a1.25 1.25 0 0 0 1.118 0L19 7.162V6a2 2 0 0 0-2-2H3Z" />
+                            <path d="m19 8.839-7.77 3.885a2.75 2.75 0 0 1-2.46 0L1 8.839V14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.839Z" />
+                        </svg>
+                        Contact Me
+                    </a>
+                </li>
+                <div class="divider my-0 h-0"></div>
+            </ul>
+        </nav>
+    </div>
+    
+    
+    <div class="global-content-container-my-projects">
+        <div class="flex items-center justify-end">
+            <h1 class="bodoni font-semibold text-xl md:text-2xl text-white text-right">My Projects</h1>
+        </div>
+        <div class="w-full h-[calc(100dvh-152px)] md:h-[calc(100dvh-168px)]  overflow-y-hidden overflow-x-auto rounded-md flex justify-between gap-1 sm:gap-2 project-container">
+            <div class="project-column">
+                <div class="project-cover">
+                    1
+                </div>
+                <span class="project-emoji">🔐</span>
+                <span class="project-name">AuthentiKey</span>
+                <p class="project-desc">
+                    A web app for tracking student log-ins, log-outs, and PC usage at ICCT. Built with Firebase and Tailwind CSS for real-time lab monitoring and admin insights.
+                </p>
+
+                <a href="https://docs.google.com/document/d/105kgBstHgWQZKs0sLsumxLkYinSeFFenTqyh0alPAjw/edit?usp=sharing" class="project-access-links" target="_blank" data-tip="Project Access Links and Login Details">
+                    Login Info & Website Link
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+
+                </a>
+                
+            </div>
+            <div class="project-column">
+                <div class="project-cover">
+                    2
+                </div>
+                <span class="project-emoji">💬</span>
+                <span class="project-name">TeaChat</span>
+                <p class="project-desc">
+                    A simple, real-time chat app using Express, Firebase, Socket.IO, and Tailwind CSS. Enables instant message syncing with a clean UI.
+                </p>
+
+                <a href="https://docs.google.com/document/d/105kgBstHgWQZKs0sLsumxLkYinSeFFenTqyh0alPAjw/edit?usp=sharing"  target="_blank" data-tip="Project Access Links and Login Details" class="project-access-links">
+                    Login Info & Website Link
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+
+                </a>
+            </div>
+            <div class="project-column">
+                <div class="project-cover">
+                    3
+                </div>
+                <span class="project-emoji">🎉</span>
+                <span class="project-name"> ICCT Events</span>
+                <p class="project-desc">
+                    A web app for posting and viewing school events. Built with MongoDB Atlas and Tailwind CSS for smooth admin posting and student browsing.
+                </p>
+
+                <a href="https://docs.google.com/document/d/105kgBstHgWQZKs0sLsumxLkYinSeFFenTqyh0alPAjw/edit?usp=sharing" class="project-access-links" target="_blank" data-tip="Project Access Links and Login Details">
+                    Login Info & Website Link
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+
+                </a>
+            </div>
+            <div class="project-column">
+                <div class="project-cover">
+                    4
+                </div>
+                <span class="project-emoji">⏱️</span>
+                <span class="project-name">DTR System</span>
+                <p class="project-desc">
+                    A Python-based CLI tool for employee time-in/out tracking, shift monitoring, and generating summary reports.
+                </p>
+
+                <a href="https://docs.google.com/document/d/105kgBstHgWQZKs0sLsumxLkYinSeFFenTqyh0alPAjw/edit?usp=sharing" class="project-access-links" target="_blank" data-tip="Project Access Links and Login Details">
+                    Login Info & Website Link
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <footer class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-6 text-xs ">
+        <aside>
+            <p>© 2025 Rhim Angelo Sagales. All rights reserved.</p>
+        </aside>
+    </footer>
+    <script src="../js/global-frontend.js"></script>
+    <script>
+        const targets = document.querySelectorAll('.project-cover');
+        const projectCols = document.querySelectorAll('.project-column');
+
+        targets.forEach(target => {
+            target.addEventListener('transitionend', (e) => {
+                if (e.propertyName === 'opacity') {
+                    const opacity = parseFloat(getComputedStyle(target).opacity);
+                    target.style.zIndex = opacity === 0 ? '-20' : '1';
+                }
+            });
+        });
+
+        projectCols.forEach(col => {
+            col.addEventListener('mouseleave', () => {
+                const cover = col.querySelector('.project-cover');
+                if (cover) cover.style.zIndex = '1'; 
+            });
+        });
+
+
+
+    </script>
+    
+</body>
+</html>

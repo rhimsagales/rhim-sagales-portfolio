@@ -1,0 +1,98 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+:root {
+    @apply scroll-smooth;
+}
+
+body {
+    @apply min-h-svh w-full text-xs bg-base-100 text-base-content pt-16 md:pt-20 box-content;
+}
+
+.global-header {
+    @apply fixed left-0 right-0 top-0 w-full h-16 md:h-20 bg-base-100/70 flex items-center px-4 md:px-12 lg:px-20 xl:px-28 2xl:px-36 backdrop-blur-md z-50;
+}
+
+.global-nav-desktop {
+    @apply hidden md:flex w-1/2 h-full items-center justify-end gap-8 font-semibold;
+}
+
+.global-logo-container {
+    @apply w-full md:w-1/2 h-full flex items-center justify-start font-semibold text-white;
+}
+
+.global-desktop-ul-links > li  {
+    @apply w-[88px] h-8 inline-flex items-center justify-center relative transition-colors duration-500 ease-in;
+}
+
+.global-desktop-ul-links > li::after{
+    @apply content-[''] absolute w-full h-[2px] bg-white bottom-[-2px] scale-x-0 origin-center transition-transform duration-500 ease-in rounded-full;
+}
+
+.global-desktop-ul-links > li:hover::after {
+    @apply scale-x-100;
+}
+
+.global-desktop-ul-links > li:hover{
+    @apply text-white transition-colors duration-500 ease-in;
+}
+
+
+.global-desktop-ul-links > li.selected::after {
+    @apply scale-x-100;
+}
+
+.global-desktop-ul-links > li.selected {
+    @apply text-white;
+}
+
+.global-hamburger-container {
+    @apply flex md:hidden w-1/2 h-full items-center justify-end;
+}
+
+.global-hamburger-btn {
+    @apply size-10 rounded-full flex items-center justify-center cursor-pointer;
+}
+
+.global-hamburger-btn > svg:nth-child(1) {
+    @apply flex;
+}
+
+.global-hamburger-btn > svg:nth-child(2) {
+    @apply hidden;
+}
+
+.global-hamburger-btn.expand > svg:nth-child(1) {
+    @apply hidden;
+}
+
+.global-hamburger-btn.expand > svg:nth-child(2) {
+    @apply flex;
+}
+
+.global-mobile-nav-modal {
+    @apply md:hidden w-1/2 bg-transparent h-svh pt-16 md:pt-20;
+}
+
+.global-nav-mobile {
+    @apply h-full w-full bg-base-200 px-4 flex flex-col gap-2 py-4;
+}
+
+.global-nav-mobile-header {
+    @apply w-full h-12 inline-flex items-center justify-start gap-2 font-semibold text-xl text-white;
+}
+
+
+.global-nav-mobile-links {
+    @apply w-full h-8 inline-flex gap-2 items-center justify-start text-xs tracking-wider active:text-white active:bg-white/10 p-1 rounded-sm font-light;
+}
+
+.global-content-container {
+    @apply w-full h-auto min-h-svh flex flex-col px-4 md:px-12 lg:px-20 xl:px-28 2xl:px-36 gap-12 md:gap-0;
+}
+
+
+.global-content-container-my-projects {
+    @apply w-full h-auto min-h-[calc(100dvh-64px)] md:min-h-[calc(100dvh-80px)] flex flex-col px-4 md:px-12 lg:px-20 xl:px-28 2xl:px-36 gap-4 mt-4 duration-[3s] ease-in-out;
+}

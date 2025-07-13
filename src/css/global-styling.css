@@ -1,0 +1,29 @@
+:root {
+    scroll-behavior: smooth;
+    --bodoni: "Bodoni Moda", serif;
+    --inter: "Inter", sans-serif;
+    --amarante: "Amarante", serif;
+    --unlock: "Unlock", serif;
+    font-family: var(--inter);
+    
+}
+
+.bodoni {
+    font-family: var(--bodoni);
+}
+
+.inter {
+    font-family: var(--inter);
+}
+
+.logo-text {
+    font-size: clamp(1.5rem, 1.4048rem + 0.4762vw, 2rem);
+}
+
+.amarante {
+    font-family: var(--amarante);
+}
+
+.unlock {
+    font-family: var(--unlock);
+}
