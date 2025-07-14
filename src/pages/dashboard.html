@@ -23,9 +23,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/portfolio-favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/portfolio-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/portfolio-favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/portfolio-favicon/site.webmanifest">
     <title>Dashboard | Portfolio</title>
 </head>
-<body class="">
+<body class="overflow-hidden">
+    <div class="loading-screen" id="loading-screen">
+        <span class="loading loading-ring loading-sm"></span>   
+        <span class="loading loading-ring loading-xl"></span>
+        <span class="loading loading-ring loading-sm"></span> 
+    </div>
     <header class="global-header">
         <div class="global-logo-container bodoni logo-text">
             <a href="">sagales.</a>
@@ -525,49 +534,60 @@
     </footer>
     <script src="../js/global-frontend.js"></script>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+        
 
-        const fadeOutElements = document.querySelectorAll('.fade-out-scroll');
-        const fadeOutElementLast = document.querySelectorAll('.fade-out-scroll-last');
+        if (window.innerWidth > 1024) { 
+            gsap.registerPlugin(ScrollTrigger);
 
-        fadeOutElements.forEach(element => {
-            gsap.to(element, {
-                opacity: 0,
-                scrollTrigger: {
-                    trigger: element,
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true // makes it scroll-linked
-                }
-            });
-        })
+            const fadeOutElements = document.querySelectorAll('.fade-out-scroll');
+            const fadeOutElementLast = document.querySelectorAll('.fade-out-scroll-last');
 
-        let lastScrollTop = window.scrollY;
-
-        fadeOutElementLast.forEach((element) => {
-            const trigger = ScrollTrigger.create({
-                trigger: element,
-                start: "top bottom", // when element enters the bottom of the viewport
-                end: "top top",      // when element reaches top of viewport
-                onUpdate: (self) => {
-                    const currentScroll = window.scrollY;
-                    const scrollingUp = currentScroll < lastScrollTop;
-
-                    if (scrollingUp) {
-                        // Fade out only when scrolling up
-                        gsap.to(element, { opacity: 0, duration: 1 });
-                    } else {
-                        // Reset visibility when scrolling down (optional)
-                        gsap.to(element, { opacity: 1, duration: 1 });
+            fadeOutElements.forEach(element => {
+                gsap.to(element, {
+                    opacity: 0,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true,
                     }
+                });
+            })
 
-                    lastScrollTop = currentScroll;
-                }
+            let lastScrollTop = window.scrollY;
+            fadeOutElementLast.forEach((element) => {
+                const trigger = ScrollTrigger.create({
+                    trigger: element,
+                    start: "top bottom",
+                    end: "top top",
+                    onUpdate: (self) => {
+                        const currentScroll = window.scrollY;
+                        const scrollingUp = currentScroll < lastScrollTop;
+
+                        if (scrollingUp) {
+                            gsap.to(element, { opacity: 0, duration: 1 });
+                        } else {
+                            gsap.to(element, { opacity: 1, duration: 1 });
+                        }
+
+                        lastScrollTop = currentScroll;
+                    }
+                });
             });
-        });
+        }
+
 
     
         
+    </script>
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+            const loader = document.getElementById("loading-screen");
+            loader.remove();
+            document.body.classList.remove('overflow-hidden')
+        }, 2000);
+        })
     </script>
 </body>
 </html>

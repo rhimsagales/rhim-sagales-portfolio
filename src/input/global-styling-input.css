@@ -7,7 +7,7 @@
 }
 
 body {
-    @apply min-h-svh w-full text-xs bg-base-100 text-base-content pt-16 md:pt-20 box-content;
+    @apply min-h-dvh w-full text-xs bg-base-100 text-base-content pt-16 md:pt-20 box-content;
 }
 
 .global-header {
@@ -89,10 +89,19 @@ body {
 }
 
 .global-content-container {
-    @apply w-full h-auto min-h-svh flex flex-col px-4 md:px-12 lg:px-20 xl:px-28 2xl:px-36 gap-12 md:gap-0;
+    @apply w-full h-auto min-h-dvh flex flex-col px-4 md:px-12 lg:px-20 xl:px-28 2xl:px-36 gap-12 md:gap-0;
 }
 
 
 .global-content-container-my-projects {
     @apply w-full h-auto min-h-[calc(100dvh-64px)] md:min-h-[calc(100dvh-80px)] flex flex-col px-4 md:px-12 lg:px-20 xl:px-28 2xl:px-36 gap-4 mt-4 duration-[3s] ease-in-out;
+}
+
+
+.global-content-container-contact-me {
+    @apply w-full h-auto min-h-[calc(100dvh-64px)] md:min-h-[calc(100dvh-80px)] flex items-center justify-center px-4 md:px-12 lg:px-20 xl:px-28 2xl:px-36 my-4;
+}
+
+.loading-screen {
+    @apply w-full h-dvh bg-base-100 fixed top-0 bottom-0 z-[9999] flex gap-2 items-center justify-center;
 }

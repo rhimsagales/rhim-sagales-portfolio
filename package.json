@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dashboard:css": "npx @tailwindcss/cli -i ./src/input/dashboard-input.css -o ./src/dist/output.css --watch",
     "global:css": "npx @tailwindcss/cli -i ./src/input/global-styling-input.css -o ./src/dist/global-styling-output.css --watch",
-    "my-projects:css": "npx @tailwindcss/cli -i ./src/input/my-projects-input.css -o ./src/dist/my-projects-output.css --watch"
+    "my-projects:css": "npx @tailwindcss/cli -i ./src/input/my-projects-input.css -o ./src/dist/my-projects-output.css --watch",
+    "contact-me:css": "npx @tailwindcss/cli -i ./src/input/contact-me-input.css -o ./src/dist/contact-me-output.css --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",

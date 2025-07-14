@@ -25,9 +25,12 @@
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
     --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-semibold: 600;
+    --font-weight-bold: 700;
     --tracking-wider: 0.05em;
     --radius-sm: 0.25rem;
     --radius-md: 0.375rem;
@@ -1405,6 +1408,9 @@
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
   }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
   .badge {
     display: inline-flex;
     align-items: center;
@@ -1447,6 +1453,12 @@
         place-items: center;
       }
     }
+  }
+  .chat {
+    display: grid;
+    column-gap: calc(0.25rem * 3);
+    padding-block: calc(0.25rem * 1);
+    --mask-chat: url("data:image/svg+xml,%3csvg width='13' height='13' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='M0 11.5004C0 13.0004 2 13.0004 2 13.0004H12H13V0.00036329L12.5 0C12.5 0 11.977 2.09572 11.8581 2.50033C11.6075 3.35237 10.9149 4.22374 9 5.50036C6 7.50036 0 10.0004 0 11.5004Z'/%3e%3c/svg%3e");
   }
   .prose {
     :root & {
@@ -1521,6 +1533,10 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .size-4 {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
   .size-5 {
     width: calc(var(--spacing) * 5);
     height: calc(var(--spacing) * 5);
@@ -1556,6 +1572,9 @@
   .h-\[2px\] {
     height: 2px;
   }
+  .h-\[calc\(100dvh-152px\)\] {
+    height: calc(100dvh - 152px);
+  }
   .h-\[calc\(100svh-80px\)\] {
     height: calc(100svh - 80px);
   }
@@ -1570,6 +1589,12 @@
   }
   .min-h-\[300px\] {
     min-height: 300px;
+  }
+  .min-h-\[calc\(100dvh-64px\)\] {
+    min-height: calc(100dvh - 64px);
+  }
+  .min-h-dvh {
+    min-height: 100dvh;
   }
   .min-h-svh {
     min-height: 100svh;
@@ -1645,6 +1670,9 @@
   .items-center {
     align-items: center;
   }
+  .justify-between {
+    justify-content: space-between;
+  }
   .justify-center {
     justify-content: center;
   }
@@ -1653,6 +1681,9 @@
   }
   .justify-start {
     justify-content: flex-start;
+  }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -1666,11 +1697,17 @@
   .gap-12 {
     gap: calc(var(--spacing) * 12);
   }
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
   .overflow-y-hidden {
     overflow-y: hidden;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
   }
   .rounded-sm {
     border-radius: var(--radius-sm);
@@ -1717,6 +1754,9 @@
   }
   .text-center {
     text-align: center;
+  }
+  .text-right {
+    text-align: right;
   }
   .text-base {
     font-size: var(--text-base);
@@ -1821,6 +1861,10 @@
     --tw-duration: 500ms;
     transition-duration: 500ms;
   }
+  .duration-\[3s\] {
+    --tw-duration: 3s;
+    transition-duration: 3s;
+  }
   .ease-in {
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
@@ -1867,6 +1911,11 @@
       }
     }
   }
+  .sm\:gap-2 {
+    @media (width >= 40rem) {
+      gap: calc(var(--spacing) * 2);
+    }
+  }
   .sm\:text-2xl {
     @media (width >= 40rem) {
       font-size: var(--text-2xl);
@@ -1898,9 +1947,19 @@
       height: calc(var(--spacing) * 20);
     }
   }
+  .md\:h-\[calc\(100dvh-168px\)\] {
+    @media (width >= 48rem) {
+      height: calc(100dvh - 168px);
+    }
+  }
   .md\:h-full {
     @media (width >= 48rem) {
       height: 100%;
+    }
+  }
+  .md\:min-h-\[calc\(100dvh-80px\)\] {
+    @media (width >= 48rem) {
+      min-height: calc(100dvh - 80px);
     }
   }
   .md\:w-1\/2 {
@@ -1938,11 +1997,6 @@
       justify-content: flex-start;
     }
   }
-  .md\:gap-0 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 0);
-    }
-  }
   .md\:px-12 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 12);
@@ -1961,6 +2015,12 @@
   .md\:text-right {
     @media (width >= 48rem) {
       text-align: right;
+    }
+  }
+  .md\:text-2xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
   .md\:text-sm {

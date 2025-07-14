@@ -1,0 +1,7 @@
+.overlay-image {
+    background: url('../assets/images/heroBg.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-blend-mode:soft-light;
+}
