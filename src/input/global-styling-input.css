@@ -94,14 +94,14 @@ body {
 
 
 .global-content-container-my-projects {
-    @apply w-full h-auto min-h-[calc(100dvh-64px)] md:min-h-[calc(100dvh-80px)] flex flex-col px-4 md:px-12 lg:px-20 xl:px-28 2xl:px-36 gap-4 mt-4 duration-[3s] ease-in-out;
+    @apply w-full h-auto min-h-[472px] md:min-h-[calc(100dvh-80px)] flex flex-col px-4 md:px-12 lg:px-20 xl:px-28 2xl:px-36 gap-4 my-4 duration-[3s] ease-in-out;
 }
 
 
 .global-content-container-contact-me {
-    @apply w-full h-auto min-h-[calc(100dvh-64px)] md:min-h-[calc(100dvh-80px)] flex items-center justify-center px-4 md:px-12 lg:px-20 xl:px-28 2xl:px-36 my-4;
+    @apply w-full h-auto min-h-[639px] md:min-h-[calc(100dvh-80px)] flex items-center justify-center px-4 md:px-12 lg:px-20 xl:px-28 2xl:px-36 my-4;
 }
 
 .loading-screen {
-    @apply w-full h-dvh bg-base-100 fixed top-0 bottom-0 z-[9999] flex gap-2 items-center justify-center;
+    @apply w-full h-dvh bg-base-100 fixed top-0 bottom-0 left-0 right-0 z-[9999] flex gap-2 items-center justify-center;
 }

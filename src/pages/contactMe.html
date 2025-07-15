@@ -109,7 +109,7 @@
     
     
     <main class="global-content-container-contact-me">
-        <div class="w-full md:w-3/4 h-[calc(90dvh-64px)] md:h-[calc(90dvh-80px)] flex overflow-hidden rounded-md">
+        <div class="w-full md:w-3/4 h-[calc(90dvh-64px)] min-h-[639px] md:h-[calc(90dvh-80px)] flex overflow-hidden rounded-md">
             <div class="hidden md:flex overlay-image w-1/2 h-full">
 
             </div>
@@ -125,7 +125,7 @@
                             <path
                                 d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
                         </svg>
-                        <input type="email" class="grow" placeholder="Email" required/>
+                        <input type="email" class="grow" placeholder="Gmail only" required/>
                     </label>
                     
                     <label class="input input-bordered flex items-center gap-2 w-full bg-transparent min-h-12">
@@ -137,7 +137,7 @@
                     </label>
                     <textarea class="textarea textarea-bordered w-full bg-transparent h-32" placeholder="Your Message"></textarea>
                     <button class="btn btn-primary h-12 contact-me-submit-btn" disabled="disabled">Submit</button>
-                    <div class="divider h-2 my-0">OR</div>
+                    <div type="submit" class="divider h-2 my-0">OR</div>
                 </div>
                 <div class="w-full h-[10%] flex items-start justify-center gap-2">
                     <a href="https://www.facebook.com/rhim.sagales.24" button class="btn btn-circle rounded-full tooltip" target="_blank" data-tip="Find me on Facebook">
@@ -192,6 +192,18 @@
         </aside>
     </footer>
     <script src="../js/global-frontend.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (async function(){
+        emailjs.init({
+            publicKey: 'yNOraJnx3DvSgZapG',
+        });
+    })();
+    </script>
+
+
     <script src="../js/contact-me.js"></script>
     <script>
         window.addEventListener('load', () => {

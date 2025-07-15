@@ -112,7 +112,7 @@
     
     
     <div class="global-content-container">
-        <div class="hero-section fade-out-scroll fade-out-scroll-last ">
+        <div class="hero-section fade-out-scroll  ">
             <div class="hero-contents-container">
                 <h1 class="bodoni">
                     Elevating ideas through clean, modern web development.
@@ -132,7 +132,7 @@
             <div class="hidden lg:flex w-[50%] h-[calc(100svh-80px)] overlay-image">
             </div>
         </div>
-        <div class="intro-section flex-col md:flex-row-reverse fade-out-scroll fade-out-scroll-last ">
+        <div class="intro-section flex-col md:flex-row-reverse fade-out-scroll  ">
             <div class="flex items-center justify-center md:justify-end w-full md:w-1/2 h-full">
                 <h1 class="w-[90%] inter text-base sm:text-2xl md:text-xl font-normal text-center md:text-right text-white">
                     Hey there! I’m <strong class="bodoni text-[#ed5e93]">Rhim Angelo Sagales</strong>,
@@ -303,7 +303,7 @@
             </div>
             
         </div>
-        <div class="intro-section flex-col md:flex-row fade-out-scroll fade-out-scroll-last ">
+        <div class="intro-section flex-col md:flex-row fade-out-scroll  ">
             <div class="w-full md:w-1/2 h-auto  md:h-full flex flex-row items-center justify-center md:justify-start">
                 <h1 class="w-[90%]  inter text-base sm:text-2xl md:text-xl font-normal text-center md:text-left text-white mt-0 md:mt-32">
                     I’ve applied this mindset across projects—from portfolios to full-stack apps—gaining experince and skills in...
@@ -539,41 +539,26 @@
         if (window.innerWidth > 1024) { 
             gsap.registerPlugin(ScrollTrigger);
 
-            const fadeOutElements = document.querySelectorAll('.fade-out-scroll');
-            const fadeOutElementLast = document.querySelectorAll('.fade-out-scroll-last');
+            const fadeElements = document.querySelectorAll('.fade-out-scroll');
 
-            fadeOutElements.forEach(element => {
-                gsap.to(element, {
+            fadeElements.forEach(element => {
+                gsap.from(element, {
                     opacity: 0,
+                    y: 50,
+                    duration: 2,
+                    ease: "power1.out", 
+
                     scrollTrigger: {
                         trigger: element,
-                        start: "top top",
-                        end: "bottom top",
-                        scrub: true,
-                    }
-                });
-            })
-
-            let lastScrollTop = window.scrollY;
-            fadeOutElementLast.forEach((element) => {
-                const trigger = ScrollTrigger.create({
-                    trigger: element,
-                    start: "top bottom",
-                    end: "top top",
-                    onUpdate: (self) => {
-                        const currentScroll = window.scrollY;
-                        const scrollingUp = currentScroll < lastScrollTop;
-
-                        if (scrollingUp) {
-                            gsap.to(element, { opacity: 0, duration: 1 });
-                        } else {
-                            gsap.to(element, { opacity: 1, duration: 1 });
-                        }
-
-                        lastScrollTop = currentScroll;
+                        start: "top bottom",
+                        end: "bottom bottom",
+                        scrub: 2,
+                        markers: false
                     }
                 });
             });
+
+            
         }
 
 

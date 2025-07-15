@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background-color: #111827;
+            padding: 20px;
+            color: #e5e7eb;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .email-wrapper {
+            width: 100%;
+            margin: auto;
+            background-color: #1f2937;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-sizing: border-box;
+        }
+
+        .email-wrapper h2 {
+            margin-bottom: 24px;
+            font-size: 22px;
+            color: #ffffff;
+            border-bottom: 1px solid #374151;
+            padding-bottom: 12px;
+        }
+
+        .info-group {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .value {
+            font-size: 16px;
+            color: #f3f4f6;
+            line-height: 1.4;
+        }
+
+        .message-box {
+            margin-top: 10px;
+            background-color: #111827;
+            border-left: 4px solid #4f46e5;
+            padding: 16px;
+            border-radius: 8px;
+            color: #d1d5db;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-wrapper">
+        <h2>📩 New Message from a Recruiter</h2>
+
+        <div class="info-group">
+            <span class="label">Full Name</span>
+            <span class="value">{{fullName}}</span>
+        </div>
+
+        <div class="info-group">
+            <span class="label">Email</span>
+            <span class="value">{{email}}</span>
+        </div>
+
+        <div class="info-group">
+            <span class="label">Message</span>
+            <div class="message-box">{{message}}</div>
+        </div>
+    </div>
+</body>
+
+</html>
